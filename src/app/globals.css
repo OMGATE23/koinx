@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+.header-link-bg {
+  background: linear-gradient(to right, #2870EA, #1B4AEF);
+}
+
+.range-bar {
+  background: linear-gradient(90deg, #FF4949 0%, #FF4E11 16.67%, #FC870A 33.33%, #FFAF11 50%, #C2CB21 66.67%, #11EB68 83.33%, #11EB68 100%);
+}
+
+.slider {
+  transform: translateX(-50%);
+}
+
+.transform-top-half {
+  transform: translateY(-50%);
+}
+
+.bitcoin-gradient-1 {
+  background: linear-gradient(135deg, #79F1A4 0%, #0E5CAD 100%);
+}
+
+.bitcoin-gradient-2 {
+  background: linear-gradient(135deg, #FF9865 0%, #EF3031 100%);
+}
+
+.pie-chart {
+  background: repeating-conic-gradient(from 0deg,
+      #0082FF 0deg 288deg,
+      #FAA002 288deg 360deg);
+}
