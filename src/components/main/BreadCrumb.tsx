@@ -8,7 +8,7 @@ const BreadCrumb = () => {
     <span className="flex w-fit p-4 py-3 justify-center items-center gap-2">
       <p className="text-[#3E5765]">Cryptocurrencies</p>{" "}
       <img alt="breadcrumb pointer" src="/assets/breadcrumb.svg" />{" "}
-      <p className="captilize">{coin || "Bitcoin"}</p>
+      <p className="capitalize">{coin || "Bitcoin"}</p>
     </span>
   );
 };
