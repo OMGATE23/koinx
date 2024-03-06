@@ -1,9 +1,12 @@
-export async function GET(request: Request) {
+import { NextRequest } from "next/server";
+
+export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
-    const param = searchParams.get("coin");
+    const param = request.nextUrl.searchParams.get("coin");
     let res = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${param}?tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`
+      `https://api.coingecko.com/api/v3/coins/${
+        param || "bitcoin"
+      }?tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`
     );
     if (!res.ok) {
       throw new Error("Something went wrong" + res.statusText);
