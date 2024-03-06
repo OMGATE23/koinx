@@ -30,7 +30,7 @@ const useCoinInfo = (coin: string = "bitcoin") => {
         setLoading(false);
       })
       .catch((err) => {
-        console.error(err);
+        console.error(err.message);
         setError(err);
         setLoading(false);
       });
