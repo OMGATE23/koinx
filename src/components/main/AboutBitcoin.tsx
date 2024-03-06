@@ -47,6 +47,7 @@ const AboutBitcoin = () => {
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="bitcoin-gradient-1 p-4 flex items-start gap-8 rounded-lg md:w-[50%]">
           <img
+            alt="placeholder-1"
             className="w-[40%] md:w-fit aspect-square block"
             src="/assets/placeholder-1.png"
           />
@@ -64,6 +65,7 @@ const AboutBitcoin = () => {
         </div>
         <div className="bitcoin-gradient-2 p-4 flex items-start gap-8 rounded-lg md:w-[50%]">
           <img
+            alt="placeholder-2"
             className="w-[40%] md:w-fit aspect-square block"
             src="/assets/placeholder-2.png"
           />
@@ -75,7 +77,7 @@ const AboutBitcoin = () => {
               href="/"
               className="flex gap-2 md:gap-4 justify-center w-fit px-2 py-1 bg-white rounded-lg text-sm"
             >
-              Check Now <img src="/assets/right-arrow.svg" />
+              Check Now <img alt="arrow-right" src="/assets/right-arrow.svg" />
             </Link>
           </div>
         </div>

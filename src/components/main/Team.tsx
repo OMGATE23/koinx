@@ -30,6 +30,7 @@ const Team = () => {
           >
             <div className="flex flex-col items-center md:items-start gap-2">
               <img
+                alt={member.name}
                 className="w-[80%] md:w-full rounded-md"
                 width={120}
                 src={member.img}

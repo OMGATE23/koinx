@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-white items-center px-6 md:px-12 border-b-[1px] border-[#DEDFE2]">
       <Link href="/">
-        <img src="/assets/logo.svg" />
+        <img alt="logo" src="/assets/logo.svg" />
       </Link>
       <div className="hidden md:flex justify-evenly font-[500] items-center gap-8">
         <Link href="/">Crypto Taxes</Link>
@@ -20,7 +20,7 @@ const Header = () => {
       </div>
       <div>
         <button>
-          <img src="/assets/hamburger.svg" />
+          <img alt="hamburger" src="/assets/hamburger.svg" />
         </button>
       </div>
     </div>

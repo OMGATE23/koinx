@@ -21,6 +21,7 @@ const CoinOverview = () => {
         <div className="flex justify-left gap-6">
           <p className="flex items-center justify-left gap-2 text-xl">
             <img
+              alt="coin logo"
               width={36}
               src={coinInfo?.image.small || "/assets/bitcoin.svg"}
             />
@@ -43,7 +44,7 @@ const CoinOverview = () => {
             <p className="text-lg">₹ {coinData?.inr || "39,42,343"}</p>
           </div>
           <span className="flex justify-center items-center gap-2 px-2 py-1 rounded-md bg-[#EBF9F4] text-[#14B079]">
-            <img src="/assets/arrow.svg" />
+            <img alt="arrow" src="/assets/arrow.svg" />
             {coinData?.usd_24h_change.toFixed(2) || "2.51%"}
           </span>
           <p className="text-[#768396]">{"(24H)"}</p>

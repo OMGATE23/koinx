@@ -70,15 +70,19 @@ const TrendingCoinsCarousel = ({ coins }: { coins: TrendingCoins }) => {
             key={item.coin_id}
           >
             <div className="flex gap-2 md:gap-4 items-center">
-              <img src={item.small} width={20} height={20} />
+              <img alt={item.name} src={item.small} width={20} height={20} />
               <p className="text-xs md:text-sm font-[500]">{item.name}</p>
               <span className="flex gap-2 text-[0.6rem]  md:text-xs bg-[#EBF9F4] text-[#14B079] px-2 py-1 rounded-md">
-                <img src="/assets/arrow.svg" />
+                <img alt="arrow" src="/assets/arrow.svg" />
                 {item.data.price_change_percentage_24h.usd.toFixed(2)}%
               </span>
             </div>
             <p className="text-sm">{cleanPrice(item.data.price)}</p>
-            <img className=" w-full" src={item.data.sparkline} />
+            <img
+              alt={item.name + " sparkline"}
+              className=" w-full"
+              src={item.data.sparkline}
+            />
           </div>
         ))}
       </div>
@@ -88,7 +92,7 @@ const TrendingCoinsCarousel = ({ coins }: { coins: TrendingCoins }) => {
           onClick={scrollToRightEnd}
           className="absolute bg-white top-[50%] transform-top-half shadow-md rounded-full right-0"
         >
-          <img width={48} src="/assets/scroll-right.svg" />
+          <img alt="scroll-right" width={48} src="/assets/scroll-right.svg" />
         </button>
       )}
 
@@ -98,6 +102,7 @@ const TrendingCoinsCarousel = ({ coins }: { coins: TrendingCoins }) => {
           className="absolute bg-white top-[50%] transform-top-half shadow-md rounded-full left-0"
         >
           <img
+            alt="scroll-left"
             width={48}
             className="rotate-[180deg]"
             src="/assets/scroll-right.svg"

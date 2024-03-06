@@ -28,11 +28,11 @@ const TrendingCoins = () => {
           COINS.map((coin) => (
             <li key={coin.name} className="flex justify-between px-2">
               <p className="flex items-center gap-2">
-                <img width={24} height={24} src={coin.src} />
+                <img alt={coin.name} width={24} height={24} src={coin.src} />
                 {coin.name}
               </p>
               <span className="flex gap-2 bg-[#EBF9F4] text-[#14B079] px-2 py-1 rounded-md">
-                <img src="/assets/arrow.svg" />
+                <img alt="arrow" src="/assets/arrow.svg" />
                 {coin.change}%
               </span>
             </li>
@@ -41,11 +41,11 @@ const TrendingCoins = () => {
           coins.slice(0, 3).map(({ item }) => (
             <li key={item.coin_id} className="flex justify-between px-2">
               <p className="flex items-center gap-2">
-                <img width={24} height={24} src={item.small} />
+                <img alt={item.name} width={24} height={24} src={item.small} />
                 {item.name}
               </p>
               <span className="flex gap-2 bg-[#EBF9F4] text-[#14B079] px-2 py-1 rounded-md">
-                <img src="/assets/arrow.svg" />
+                <img alt="arrow" src="/assets/arrow.svg" />
                 {item.data.price_change_percentage_24h.usd.toFixed(2)}%
               </span>
             </li>

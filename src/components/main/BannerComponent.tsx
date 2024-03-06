@@ -11,13 +11,14 @@ const BannerComponent = () => {
         With our range of features that you can equip for free, KoinX allows you
         to be more educated and aware of your tax reports.
       </p>
-      <img src="/assets/app-demo.svg" />
+      <img alt="app-demo" src="/assets/app-demo.svg" />
       <Link
         href="/"
         className="text-black bg-white flex gap-4 px-4 
             py-3 rounded-md font-semibold"
       >
-        Get Started for FREE <img src="/assets/right-arrow.svg" />
+        Get Started for FREE{" "}
+        <img alt="right-arrow" src="/assets/right-arrow.svg" />
       </Link>
     </div>
   );
