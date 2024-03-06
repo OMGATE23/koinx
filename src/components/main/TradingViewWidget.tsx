@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useRef, memo } from "react";
 
 function TradingViewWidget() {
-  const { coinInfo } = useCoinInfo();
+  const { coinInfo, error, loading } = useCoinInfo();
   const container = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -52,6 +52,16 @@ function TradingViewWidget() {
           <span className="blue-text">Track all markets on TradingView</span>
         </a>
       </div>
+      {loading && (
+        <div className="w-full h-full flex justify-center items-center">
+          <p>Loading</p>
+        </div>
+      )}
+      {error && (
+        <div className="w-full h-full flex justify-center items-center">
+          <p>Oops! There was some error while fetchig the graph!</p>
+        </div>
+      )}
     </div>
   );
 }
