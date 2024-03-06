@@ -17,7 +17,9 @@ const Performance = () => {
       <div className="flex flex-col gap-4">
         <div className="flex items-center py-2 gap-4 justify-between w-full">
           <p className="gap-2 flex flex-col text-xs md:text-sm justify-center items-start ">
-            <span className="gap-2 text-[#44475B] font-[300]">Today's Low</span>{" "}
+            <span className="gap-2 text-[#44475B] font-[300]">
+              Today&apos;s Low
+            </span>{" "}
             <span className="text-base  text-[#44475B] font-[500]">
               46,930.22
             </span>
@@ -27,13 +29,13 @@ const Performance = () => {
             <div
               className={`absolute top-2 left-[70.75%] flex flex-col items-center slider justify-center`}
             >
-              <img width={12} src="/assets/arrow-up.svg" />
+              <img alt="arrow-up" width={12} src="/assets/arrow-up.svg" />
               <p className="text-[#44475B] font-[300]">$48,637.83</p>
             </div>
           </div>
           <p className="gap-2 flex flex-col text-xs md:text-sm justify-center items-end ">
             <span className="gap-2  text-right  text-[#44475B] font-[300]">
-              Today's High
+              Today&apos;s High
             </span>{" "}
             <span className="text-base  text-[#44475B] font-[500]  ">
               49,743.83
@@ -62,7 +64,7 @@ const Performance = () => {
 
       <div>
         <h4 className="flex items-center gap-2 font-[500] text-lg">
-          Fundamentals <img src="/assets/tooltip.svg" />
+          Fundamentals <img alt="tooltip" src="/assets/tooltip.svg" />
         </h4>
         <div className="grid grid-cols-1 grid-flow-row md:grid-cols-2 gap-x-8 ">
           <div className="flex flex-col justify-center items-center w-full">
