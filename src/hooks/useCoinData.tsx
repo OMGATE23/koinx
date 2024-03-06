@@ -34,6 +34,7 @@ const useCoinData = (coin: string = "bitcoin") => {
       })
       .catch((err) => {
         setError(err);
+        console.error(err);
         setLoading(false);
       });
   }, [coin]);
