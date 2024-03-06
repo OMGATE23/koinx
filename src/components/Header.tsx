@@ -18,7 +18,7 @@ const Header = () => {
           Get Started
         </Link>
       </div>
-      <div>
+      <div className="md:hidden">
         <button>
           <img alt="hamburger" src="/assets/hamburger.svg" />
         </button>
