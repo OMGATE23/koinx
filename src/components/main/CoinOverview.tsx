@@ -13,7 +13,7 @@ import { useParams } from "next/navigation";
 import useCoinInfo from "@/hooks/useCoinInfo";
 
 const CoinOverview = () => {
-  let { loading, coinData, error } = useCoinData();
+  let { coinData } = useCoinData();
   let { coinInfo } = useCoinInfo();
   return (
     <div className=" w-[100%] md:w-[70%] flex flex-col gap-6">
