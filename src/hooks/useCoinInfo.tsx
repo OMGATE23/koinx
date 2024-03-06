@@ -8,7 +8,9 @@ export type CoinInfo = {
     small: string;
   };
 };
-
+function getApiUrl(coin: string): string {
+  return `https://api.coingecko.com/api/v3/coins/${coin}?tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false`;
+}
 const useCoinInfo = (coin: string = "bitcoin") => {
   let params = useParams();
   coin = (params.coin as string) || coin;
@@ -18,7 +20,7 @@ const useCoinInfo = (coin: string = "bitcoin") => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/coinInfo?coin=${coin}`)
+    fetch(getApiUrl(coin))
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch data");

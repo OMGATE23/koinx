@@ -10,6 +10,10 @@ export type CoinData = {
   usd_24h_change: number;
 };
 
+function getApiUrl(coin: string): string {
+  return `https://api.coingecko.com/api/v3/simple/price?ids=${coin}&vs_currencies=inr%2Cusd&include_24hr_change=true`;
+}
+
 const useCoinData = (coin: string = "bitcoin") => {
   let params = useParams();
   coin = (params.coin as string) || coin;
@@ -19,7 +23,7 @@ const useCoinData = (coin: string = "bitcoin") => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/coin?coin=${coin}`)
+    fetch(getApiUrl(coin))
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch data");
